@@ -28,24 +28,19 @@ class MainActivity : AppCompatActivity() {
                     "После 10К сотни перестают отображаться\n" +
                     "После 1M сотни тысяч отображаются в формате 1.3M\n" +
                     "Задумайтесь о том, что стоит это вынести в какую-то функцию, а не хранить эту логику в Activity",
-            published = "12 мая в 19:22",
-//            likedByMe = false
+            published = "12 мая в 19:22"
         )
-        binding.root.setOnClickListener {
-            print("Поехалиииии")
-        }
+
         binding.render(post)
         binding.likes.setOnClickListener {
             post.likedByMe = !post.likedByMe
             binding.likes.setImageResource(getLikeIconResId(post.likedByMe))
             post.likes = countLikeByMe(post.likedByMe, post.likes)
-            post.reductionLike = reductionNumbers(post.likes)
             binding.render(post)
         }
 
         binding.share.setOnClickListener {
             post.shares += 1
-            post.reductionShare = reductionNumbers(post.shares)
             binding.render(post)
         }
     }
@@ -55,9 +50,9 @@ class MainActivity : AppCompatActivity() {
         authorName.text = post.author
         date.text = post.published
         postText.text = post.content
-        amountLikes.text = post.reductionLike
+        amountLikes.text = reductionNumbers(post.likes)
         likes.setImageResource(getLikeIconResId(post.likedByMe))
-        amountShare.text = post.reductionShare
+        amountShare.text = reductionNumbers(post.shares)
     }
 
     @DrawableRes
