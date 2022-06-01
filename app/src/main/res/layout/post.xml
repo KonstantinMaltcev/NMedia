@@ -60,7 +60,7 @@
         app:constraint_referenced_ids="author_name,avatar_image,date" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/post"
+        android:id="@+id/postText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/barrier1"
@@ -75,7 +75,7 @@
         android:src="@drawable/ic_like_24dp"
         app:layout_constraintEnd_toStartOf="@id/amount_likes"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/post" />
+        app:layout_constraintTop_toBottomOf="@id/postText" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/amount_likes"
@@ -87,7 +87,7 @@
         android:singleLine="true"
         app:layout_constraintEnd_toStartOf="@id/share"
         app:layout_constraintStart_toEndOf="@id/likes"
-        app:layout_constraintTop_toBottomOf="@id/post"
+        app:layout_constraintTop_toBottomOf="@id/postText"
         tools:text="5000" />
 
     <androidx.appcompat.widget.AppCompatImageButton
@@ -99,7 +99,7 @@
         android:background="@android:color/transparent"
         android:src="@drawable/ic_share_24dp"
         app:layout_constraintStart_toEndOf="@id/amount_likes"
-        app:layout_constraintTop_toBottomOf="@id/post" />
+        app:layout_constraintTop_toBottomOf="@id/postText" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/amount_share"
@@ -108,7 +108,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toEndOf="@id/share"
-        app:layout_constraintTop_toBottomOf="@id/post"
+        app:layout_constraintTop_toBottomOf="@id/postText"
         tools:text="100000" />
 
     <androidx.appcompat.widget.AppCompatImageButton
@@ -120,7 +120,7 @@
         android:background="@android:color/transparent"
         android:src="@drawable/ic_eye_24dp"
         app:layout_constraintEnd_toStartOf="@id/amount_looking"
-        app:layout_constraintTop_toBottomOf="@id/post" />
+        app:layout_constraintTop_toBottomOf="@id/postText" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/amount_looking"
@@ -130,6 +130,6 @@
         android:ellipsize="end"
         android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/post"
+        app:layout_constraintTop_toBottomOf="@id/postText"
         tools:text="112" />
 </androidx.constraintlayout.widget.ConstraintLayout>
